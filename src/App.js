@@ -31,10 +31,9 @@ class App extends Component {
   }
 
   render() {
-    const randomImage = this.state.images 
+    const randomImage = this.state.images.length > 1 
       ? Math.floor(Math.random() * this.state.images.length)
       : null;
-    console.log("RI",randomImage)
     return (
       <div className="App">
         <header className="App-header">
@@ -42,7 +41,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">+</h1>
             <img
-              src="https://avatars3.githubusercontent.com/u/18146764?s=400&v=4"
+              src="http://owlcarousel2.github.io/OwlCarousel2/assets/img/owl-logo.png"
               className="App-logo-nospin"
               alt="logo"
             />
