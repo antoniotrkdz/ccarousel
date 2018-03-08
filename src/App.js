@@ -52,11 +52,11 @@ class App extends Component {
           </div>
           <h1 className="App-title">
             Welcome to<br />
-            Antonio Trabalza skills test for Cantiere Creativo
+            Antonio Trabalza's skills test for Cantiere Creativo
           </h1>
         </header>
         <div className="App-container">
-          <OwlCarousel className="owl-theme" loop margin={10} nav>
+          <OwlCarousel className="owl-theme" lazyLoad loop margin={10} nav>
             <div className="item">
               <img
                 src={'https://unsplash.it/300?image=' + this.randomImage()}
