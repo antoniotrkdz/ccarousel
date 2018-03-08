@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import OwlCarousel from 'react-owl-carousel3';
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,6 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.fetchImages = this.fetchImages.bind(this);
+    this.randomImage = this.randomImage.bind(this);
 
     this.state = {
       images: [],
@@ -25,15 +27,17 @@ class App extends Component {
       .catch(error => console.log('Fetch operation failed: ' + error.message));
   }
 
+  randomImage() {
+    return this.state.images.length > 0
+      ? Math.floor(Math.random() * this.state.images.length)
+      : null;
+  }
+
   componentWillMount() {
     this.fetchImages();
   }
 
   render() {
-    const randomImage =
-      this.state.images.length > 0
-        ? Math.floor(Math.random() * this.state.images.length)
-        : null;
     return (
       <div className="App">
         <header className="App-header">
@@ -52,9 +56,104 @@ class App extends Component {
           </h1>
         </header>
         <div className="App-container">
-          <img src={'https://unsplash.it/300?image=' + randomImage}
-            className="App-images"
-            alt="unsplash random" />
+          <OwlCarousel className="owl-theme" loop margin={10} nav>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>1</h4>
+            </div>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>2</h4>
+            </div>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>3</h4>
+            </div>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>4</h4>
+            </div>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>5</h4>
+            </div>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>6</h4>
+            </div>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>7</h4>
+            </div>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>8</h4>
+            </div>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>9</h4>
+            </div>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>10</h4>
+            </div>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>11</h4>
+            </div>
+            <div className="item">
+              <img
+                src={'https://unsplash.it/300?image=' + this.randomImage()}
+                className="App-images"
+                alt="unsplash random"
+              />
+              <h4>12</h4>
+            </div>
+          </OwlCarousel>
         </div>
       </div>
     );
