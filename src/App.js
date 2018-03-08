@@ -28,9 +28,10 @@ class App extends Component {
   }
 
   randomImage() {
-    return this.state.images.length > 0
-      ? Math.floor(Math.random() * this.state.images.length)
-      : null;
+    if (this.state.images.length > 0) {
+      var ids = this.state.images.map(item => item.id);
+      return ids[Math.floor(Math.random() * ids.length)];
+    }
   }
 
   componentWillMount() {
