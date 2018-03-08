@@ -19,10 +19,9 @@ class App extends Component {
       .then(response => response.json())
       .then(response =>
         this.setState({
-          images: response
+          images: response,
         })
       )
-      .then(log => console.log('image url', this.state))
       .catch(error => console.log('Fetch operation failed: ' + error.message));
   }
 
@@ -31,19 +30,20 @@ class App extends Component {
   }
 
   render() {
-    const randomImage = this.state.images.length > 1 
-      ? Math.floor(Math.random() * this.state.images.length)
-      : null;
+    const randomImage =
+      this.state.images.length > 0
+        ? Math.floor(Math.random() * this.state.images.length)
+        : null;
     return (
       <div className="App">
         <header className="App-header">
           <div className="App-header-images">
-            <img src={logo} className="App-logo" alt="logo" />
+            <img src={logo} className="App-logo" alt="react logo" />
             <h1 className="App-title">+</h1>
             <img
               src="http://owlcarousel2.github.io/OwlCarousel2/assets/img/owl-logo.png"
               className="App-logo-nospin"
-              alt="logo"
+              alt="owl logo"
             />
           </div>
           <h1 className="App-title">
@@ -51,8 +51,10 @@ class App extends Component {
             Antonio Trabalza skills test for Cantiere Creativo
           </h1>
         </header>
-        <div>
-          <img src={"https://unsplash.it/300?image=" + randomImage} alt="" />
+        <div className="App-container">
+          <img src={'https://unsplash.it/300?image=' + randomImage}
+            className="App-images"
+            alt="unsplash random" />
         </div>
       </div>
     );
