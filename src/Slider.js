@@ -5,6 +5,7 @@ export default class Responsive extends Component {
   render() {
     var settings = {
       dots: true,
+      lazyLoad: true,
       infinite: true,
       speed: 500,
       slidesToShow: 4,
@@ -41,76 +42,100 @@ export default class Responsive extends Component {
       <div>
         <Slider {...settings}>
           <div>
+            <img
+              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              className="App-images"
+              alt="unsplash random"
+            />
             <h3>1</h3>
+          </div>
+          <div>
             <img
               src={'https://unsplash.it/300?image=' + this.props.randomImage()}
               className="App-images"
               alt="unsplash random"
             />
-          </div>
-          <div>
             <h3>2</h3>
+          </div>
+          <div>
             <img
               src={'https://unsplash.it/300?image=' + this.props.randomImage()}
               className="App-images"
               alt="unsplash random"
             />
-          </div>
-          <div>
             <h3>3</h3>
+          </div>
+          <div>
             <img
               src={'https://unsplash.it/300?image=' + this.props.randomImage()}
               className="App-images"
               alt="unsplash random"
             />
-          </div>
-          <div>
             <h3>4</h3>
+          </div>
+          <div>
             <img
               src={'https://unsplash.it/300?image=' + this.props.randomImage()}
               className="App-images"
               alt="unsplash random"
             />
-          </div>
-          <div>
             <h3>5</h3>
+          </div>
+          <div>
             <img
               src={'https://unsplash.it/300?image=' + this.props.randomImage()}
               className="App-images"
               alt="unsplash random"
             />
-          </div>
-          <div>
             <h3>6</h3>
+          </div>
+          <div>
             <img
               src={'https://unsplash.it/300?image=' + this.props.randomImage()}
               className="App-images"
               alt="unsplash random"
             />
-          </div>
-          <div>
             <h3>7</h3>
+          </div>
+          <div>
             <img
               src={'https://unsplash.it/300?image=' + this.props.randomImage()}
               className="App-images"
               alt="unsplash random"
             />
-          </div>
-          <div>
             <h3>8</h3>
-            <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
-              className="App-images"
-              alt="unsplash random"
-            />
           </div>
           <div>
-            <h3>9</h3>
             <img
               src={'https://unsplash.it/300?image=' + this.props.randomImage()}
               className="App-images"
               alt="unsplash random"
             />
+            <h3>9</h3>
+          </div>
+          <div>
+            <img
+              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              className="App-images"
+              alt="unsplash random"
+            />
+            <h3>10</h3>
+          </div>
+          <div>
+            <img
+              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              className="App-images"
+              alt="unsplash random"
+            />
+            <h3>11</h3>
+          </div>
+          <div>
+            <img
+              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              className="App-images"
+              alt="unsplash random"
+            />
+            <h3>12</h3>
           </div>
         </Slider>
       </div>
