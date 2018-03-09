@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Responsive from './Slider.js';
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,6 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.fetchImages = this.fetchImages.bind(this);
+    this.randomImage = this.randomImage.bind(this);
 
     this.state = {
       images: [],
@@ -25,26 +27,33 @@ class App extends Component {
       .catch(error => console.log('Fetch operation failed: ' + error.message));
   }
 
+  randomImage() {
+    if (this.state.images.length > 0) {
+      var ids = this.state.images.map(item => item.id);
+      return ids[Math.floor(Math.random() * ids.length)];
+    }
+  }
+
   componentWillMount() {
     this.fetchImages();
   }
 
   render() {
-    const randomImage =
-      this.state.images.length > 0
-        ? Math.floor(Math.random() * this.state.images.length)
-        : null;
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+    };
+
     return (
       <div className="App">
         <header className="App-header">
           <div className="App-header-images">
             <img src={logo} className="App-logo" alt="react logo" />
             <h1 className="App-title">+</h1>
-            <img
-              src="http://owlcarousel2.github.io/OwlCarousel2/assets/img/owl-logo.png"
-              className="App-logo-nospin"
-              alt="owl logo"
-            />
+            <h1 className="App-logo-slick">slick</h1>
           </div>
           <h1 className="App-title">
             Welcome to<br />
@@ -52,9 +61,9 @@ class App extends Component {
           </h1>
         </header>
         <div className="App-container">
-          <img src={'https://unsplash.it/300?image=' + randomImage}
-            className="App-images"
-            alt="unsplash random" />
+          <Responsive
+            randomImage={this.randomImage}
+          />
         </div>
       </div>
     );
