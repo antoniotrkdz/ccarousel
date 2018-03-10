@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import {Route} from 'react-router-dom';
 import Owl from './Owl.js';
 import Slick from './Slick.js';
-import Responsive from './Slider.js';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
