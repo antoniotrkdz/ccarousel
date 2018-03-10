@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+import {Route} from 'react-router-dom';
+import Owl from './Owl.js';
+import Slick from './Slick.js';
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.fetchImages = this.fetchImages.bind(this);
+    this.randomImage = this.randomImage.bind(this);
 
     this.state = {
       images: [],
@@ -25,37 +28,41 @@ class App extends Component {
       .catch(error => console.log('Fetch operation failed: ' + error.message));
   }
 
+  randomImage() {
+    if (this.state.images.length > 0) {
+      var ids = this.state.images.map(item => item.id);
+      return ids[Math.floor(Math.random() * ids.length)];
+    }
+  }
+
   componentWillMount() {
     this.fetchImages();
   }
 
   render() {
-    const randomImage =
-      this.state.images.length > 0
-        ? Math.floor(Math.random() * this.state.images.length)
-        : null;
     return (
       <div className="App">
-        <header className="App-header">
-          <div className="App-header-images">
-            <img src={logo} className="App-logo" alt="react logo" />
-            <h1 className="App-title">+</h1>
-            <img
-              src="http://owlcarousel2.github.io/OwlCarousel2/assets/img/owl-logo.png"
-              className="App-logo-nospin"
-              alt="owl logo"
+        <main>
+          <switch>
+            <Route
+              exact
+              path={'/'}
+              component={() =>
+                <Owl
+                  fetchImages={this.fetchImages}
+                  randomImage={this.randomImage}
+                />}
             />
-          </div>
-          <h1 className="App-title">
-            Welcome to<br />
-            Antonio Trabalza skills test for Cantiere Creativo
-          </h1>
-        </header>
-        <div className="App-container">
-          <img src={'https://unsplash.it/300?image=' + randomImage}
-            className="App-images"
-            alt="unsplash random" />
-        </div>
+            <Route
+              path="/slick"
+              component={() =>
+                <Slick
+                  fetchImages={this.fetchImages}
+                  randomImage={this.randomImage}
+                />}
+            />
+          </switch>
+        </main>
       </div>
     );
   }
