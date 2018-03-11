@@ -16,7 +16,7 @@ class Slick extends Component {
           </div>
           <h1 className="App-title">
             Welcome to<br />
-            Antonio Trabalza skills test for Cantiere Creativo
+            Antonio Trabalza's skills test for Cantiere Creativo
           </h1>
         </header>
         <div className="App-container">
