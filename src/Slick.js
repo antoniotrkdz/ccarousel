@@ -21,16 +21,12 @@ class Slick extends Component {
         </header>
         <div className="App-container">
           <h4 className="App-name">
-            This is{' '}
-            <a href="https://react-slick.neostack.com/">
+            This is <a href="https://react-slick.neostack.com/">
               React Slick
             </a>{' '}
-            go back to{' '}
-            <Link to={'/'}>react-owl-carousel3</Link>
+            go back to <Link to={'/'}>react-owl-carousel3</Link>
           </h4>
-          <Responsive
-            randomImage={this.props.randomImage}
-          />
+          <Responsive randomImage={this.props.randomImage} />
         </div>
       </div>
     );
