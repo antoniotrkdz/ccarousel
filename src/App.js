@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import Owl from './Owl.js';
 import Slick from './Slick.js';
 import './App.css';
@@ -44,7 +44,7 @@ class App extends Component {
     return (
       <div className="App">
         <main>
-          <switch>
+          <Switch>
             <Route
               exact
               path={'/'}
@@ -62,7 +62,7 @@ class App extends Component {
                   randomImage={this.randomImage}
                 />}
             />
-          </switch>
+          </Switch>
         </main>
       </div>
     );
