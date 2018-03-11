@@ -40,6 +40,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('publicUrl', process.env.PUBLIC_URL)
     return (
       <div className="App">
         <main>
