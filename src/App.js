@@ -40,13 +40,14 @@ class App extends Component {
   }
 
   render() {
+    console.log('pub',process.env.REACT_APP_PUBLIC_URL)
     return (
       <div className="App">
         <main>
           <Switch>
             <Route
               exact
-              path={'/'}
+              path={process.env.PUBLIC_URL + '/'}
               component={() =>
                 <Owl
                   fetchImages={this.fetchImages}
@@ -54,7 +55,7 @@ class App extends Component {
                 />}
             />
             <Route
-              path="/slick"
+              path={process.env.PUBLIC_URL + '/slick'}
               component={() =>
                 <Slick
                   fetchImages={this.fetchImages}
