@@ -29,7 +29,7 @@ class Owl extends Component {
             <a href="https://www.npmjs.com/package/react-owl-carousel3">
               react-owl-carousel3
             </a>{' '}
-            go to <Link to={'/slick'}>React Slick</Link>
+            go to <Link to={process.env.PUBLIC_URL + '/slick'}>React Slick</Link>
           </h4>
           <OwlCarousel className="owl-theme" lazyLoad loop margin={10} nav>
             <div className="item">
