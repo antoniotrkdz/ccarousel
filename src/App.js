@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.fetchImages = this.fetchImages.bind(this);
     this.randomImage = this.randomImage.bind(this);
+    this.randomHeight = this.randomHeight.bind(this);
 
     this.state = {
       images: [],
@@ -28,6 +29,10 @@ class App extends Component {
       .catch(error => console.log('Fetch operation failed: ' + error.message));
   }
 
+  randomHeight(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
   randomImage() {
     if (this.state.images.length > 0) {
       var ids = this.state.images.map(item => item.id);
@@ -40,7 +45,6 @@ class App extends Component {
   }
 
   render() {
-    console.log('pub',process.env.REACT_APP_PUBLIC_URL)
     return (
       <div className="App">
         <main>
@@ -51,6 +55,7 @@ class App extends Component {
               component={() =>
                 <Owl
                   fetchImages={this.fetchImages}
+                  randomHeight={this.randomHeight}
                   randomImage={this.randomImage}
                 />}
             />
@@ -59,6 +64,7 @@ class App extends Component {
               component={() =>
                 <Slick
                   fetchImages={this.fetchImages}
+                  randomHeight={this.randomHeight}
                   randomImage={this.randomImage}
                 />}
             />

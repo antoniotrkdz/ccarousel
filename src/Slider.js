@@ -43,7 +43,12 @@ export default class Responsive extends Component {
         <Slider {...settings}>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
@@ -51,7 +56,12 @@ export default class Responsive extends Component {
           </div>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
@@ -59,7 +69,12 @@ export default class Responsive extends Component {
           </div>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
@@ -67,7 +82,12 @@ export default class Responsive extends Component {
           </div>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
@@ -75,7 +95,12 @@ export default class Responsive extends Component {
           </div>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
@@ -83,7 +108,12 @@ export default class Responsive extends Component {
           </div>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
@@ -91,7 +121,12 @@ export default class Responsive extends Component {
           </div>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
@@ -99,7 +134,12 @@ export default class Responsive extends Component {
           </div>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
@@ -107,7 +147,12 @@ export default class Responsive extends Component {
           </div>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
@@ -115,7 +160,12 @@ export default class Responsive extends Component {
           </div>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
@@ -123,7 +173,12 @@ export default class Responsive extends Component {
           </div>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
@@ -131,7 +186,12 @@ export default class Responsive extends Component {
           </div>
           <div>
             <img
-              src={'https://unsplash.it/300?image=' + this.props.randomImage()}
+              src={
+                'https://unsplash.it/300/' +
+                this.props.randomHeight(300, 900) +
+                '?image=' +
+                this.props.randomImage()
+              }
               className="App-images"
               alt="unsplash random"
             />
