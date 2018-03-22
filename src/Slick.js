@@ -24,9 +24,13 @@ class Slick extends Component {
             This is <a href="https://react-slick.neostack.com/">
               React Slick
             </a>{' '}
-            go back to <Link to={process.env.PUBLIC_URL + '/'}>react-owl-carousel3</Link>
+            go back to{' '}
+            <Link to={process.env.PUBLIC_URL + '/'}>react-owl-carousel3</Link>
           </h4>
-          <Responsive randomImage={this.props.randomImage} />
+          <Responsive
+            randomImage={this.props.randomImage}
+            randomHeight={this.props.randomHeight}
+          />
         </div>
       </div>
     );

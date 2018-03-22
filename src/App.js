@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.fetchImages = this.fetchImages.bind(this);
     this.randomImage = this.randomImage.bind(this);
+    this.randomHeight = this.randomHeight.bind(this);
 
     this.state = {
       images: [],
@@ -26,6 +27,10 @@ class App extends Component {
         })
       )
       .catch(error => console.log('Fetch operation failed: ' + error.message));
+  }
+
+  randomHeight(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
   randomImage() {
@@ -50,6 +55,7 @@ class App extends Component {
               component={() =>
                 <Owl
                   fetchImages={this.fetchImages}
+                  randomHeight={this.randomHeight}
                   randomImage={this.randomImage}
                 />}
             />
@@ -58,6 +64,7 @@ class App extends Component {
               component={() =>
                 <Slick
                   fetchImages={this.fetchImages}
+                  randomHeight={this.randomHeight}
                   randomImage={this.randomImage}
                 />}
             />
