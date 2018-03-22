@@ -18,7 +18,7 @@ const Owl = ({randomImage, randomHeight}) =>
       </div>
       <h1 className="App-title">
         Welcome to<br />
-        Antonio Trabalza's skills test for Cantiere Creativo
+        Antonio Trabalza&apos;s skills test for Cantiere Creativo
       </h1>
     </header>
     <div className="App-container">
