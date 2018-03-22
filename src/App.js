@@ -40,7 +40,6 @@ class App extends Component {
   }
 
   render() {
-    console.log('pub',process.env.REACT_APP_PUBLIC_URL)
     return (
       <div className="App">
         <main>
